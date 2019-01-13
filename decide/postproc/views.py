@@ -42,7 +42,7 @@ class PostProcView(APIView):
         elif t=='BORDA':
             return self.borda_count(opts)
         elif t=='TEST':
-            return self.borda_count(opts)
+            return self.test(opts)
         return Response({})
     #Each option has an assigned weight. The votes each option has received will be multiplied by their corresponding weight
     def weightedOptions(self, options):
