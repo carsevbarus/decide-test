@@ -22,4 +22,4 @@ addons:
 deploy:
   provider: heroku
   api_key: 98ffff79-b5f5-44d2-a746-00c91b50abd5
-  app: decidetest
+  app: decideioprod
