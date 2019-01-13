@@ -90,6 +90,7 @@ class PostProcView(APIView):
         choices = options['choices']
         votes = options['votes']
         results = {}
+        
         for i in choices:
             results[i] = 0
 
