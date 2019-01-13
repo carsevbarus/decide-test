@@ -41,6 +41,8 @@ class PostProcView(APIView):
             return self.randomSelection(opts)
         elif t=='BORDA':
             return self.borda_count(opts)
+        elif t=='TEST':
+            return self.borda_count(opts)
         return Response({})
     #Each option has an assigned weight. The votes each option has received will be multiplied by their corresponding weight
     def weightedOptions(self, options):
@@ -99,6 +101,12 @@ class PostProcView(APIView):
                 actual_vote_option = results[option]
                 results[option] = actual_vote_option + (vote_len)
                 vote_len -= 1
+
+        return Response(results)
+
+    def test(self,options):
+
+        results = {'hola':'funciono'}
 
         return Response(results)
 
