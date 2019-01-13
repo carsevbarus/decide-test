@@ -20,3 +20,7 @@ script:
 - python manage.py test
 addons:
   postgresql: "9.6"
+deploy:
+  provider: heroku
+  api_key: 98ffff79-b5f5-44d2-a746-00c91b50abd5
+  app: decide-test
